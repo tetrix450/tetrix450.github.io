@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Visión técnica detallada de MASIC, una arquitectura informática completa diseñada desde cero." />
+    <title>Portafolio | MASIC</title>
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+  
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../index.html">Diego Cerezo Rojas</a>
+      <div class="header-actions">
+        <nav aria-label="Navegación principal">
+          <ul class="nav-links">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../acerca-de-mi.html">Sobre mí</a></li>
+            <li><a href="../proyectos.html" aria-current="page">Proyectos</a></li>
+            <li><a href="../experiencia.html">Experiencia</a></li>
+            <li><a href="../educacion.html">Educación</a></li>
+            <li><a href="../cv.html">CV</a></li>
+            <li><a href="../contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+        <nav class="lang-switcher" aria-label="Selector de idioma">
+          <a href="../../en/projects/masic.html">EN</a>
+          <a href="masic.html" aria-current="page">ES</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-content">
+      <section class="section intro">
+        <p class="eyebrow">Proyecto insignia</p>
+        <h1>MASIC</h1>
+        <p>
+          MASIC es mi proyecto de ingeniería insignia: una arquitectura informática completa diseñada desde cero con fines educativos, con una ISA original, una unidad de control microprogramada y hardware funcional basado en 74HC. Abarca la arquitectura del conjunto de instrucciones, la microarquitectura del procesador, la organización de la memoria y la cadena de herramientas de software.
+        </p>
+        <p>
+          El proyecto enfatiza la claridad de ingeniería, la consistencia arquitectónica y el co-diseño hardware/software. En lugar de basarse en lógica programable, la implementación utiliza circuitos integrados lógicos discretos de la serie 74HC para exponer la estructura del hardware directamente a nivel de sistema.
+        </p>
+        <a class="button secondary" href="../proyectos.html">Volver a Proyectos</a>
+      </section>
+
+      <section class="section" id="overview">
+        <h2>Resumen general</h2>
+        <p>
+          MASIC fue concebido como un sistema informático completo que puede entenderse desde cero. Su arquitectura incluye una CPU original basada en acumulador de 8 bits, un espacio de direcciones de 16 bits, una unidad de control cableada, 64 KiB de memoria principal, un espacio de E/S independiente de 64 KiB, interrupciones anidadas, múltiples modos de direccionamiento, una arquitectura de pila completa y un entorno de software diseñado específicamente para la máquina.
+        </p>
+        <p>
+          La filosofía de diseño no consiste en construir una máquina práctica de producción, sino en hacer explícitas y enseñables todas las decisiones arquitectónicas. Esto convierte a MASIC en una contribución técnica y en un instrumento educativo para comprender cómo se estructuran las computadoras en el límite entre hardware y software.
+        </p>
+      </section>
+
+      <section class="section" id="cpu">
+        <h2>CPU</h2>
+        <p>
+          La unidad central de procesamiento es el corazón de MASIC. Se trata de una arquitectura original basada en acumulador, diseñada para la simplicidad y la coherencia. La CPU incluye una unidad de control microprogramada, un contador de programa de 16 bits, un puntero de pila de 16 bits, un conjunto amplio de modos de direccionamiento y un conjunto de instrucciones propio adaptado a los objetivos educativos de la máquina.
+        </p>
+        <p>
+          La codificación de instrucciones se diseñó para ser regular y comprensible, al tiempo que permite las operaciones esenciales para un sistema informático funcional. El modelo de memoria incluye organización little-endian, un modelo de pila completo y un sistema de interrupciones con un vector de interrupción suministrado por el periférico.
+        </p>
+        <p>
+          La arquitectura también incluye soporte para subrutinas e interrupciones a través de un modelo de ejecución basado en pila, lo que permite manejar flujos de control estructurados en lugar de limitarse a una simple secuenciación de instrucciones. El hardware se ha construido y funciona como un sistema real.
+        </p>
+      </section>
+
+      <section class="section" id="video-display-adapter">
+        <h2>Adaptador de vídeo</h2>
+        <p>
+          El adaptador de vídeo es un subsistema de hardware independiente creado específicamente para MASIC. En lugar de integrar el hardware de visualización directamente en la placa de la CPU, el proyecto separa el procesamiento de la generación de vídeo, lo que da lugar a una estructura modular más limpia y más realista.
+        </p>
+        <p>
+          El subsistema se implementó con circuitos integrados lógicos de la serie 74HC y requirió el diseño de lógica digital de generación de vídeo, circuitos de temporización, lógica de interfaz de memoria, mecanismos de sincronización e integración de sistemas. La placa funciona como un periférico dedicado que se comunica con la CPU a través de una interfaz de hardware personalizada.
+        </p>
+        <p>
+          Esta separación hace que el proyecto sea más representativo de los sistemas informáticos reales, donde los dispositivos independientes interactúan a través de interfaces bien definidas en lugar de compartir la misma lógica física.
+        </p>
+      </section>
+
+      <section class="section" id="assembler">
+        <h2>Ensamblador</h2>
+        <p>
+          MASIC incluye un ensamblador personalizado diseñado para soportar el conjunto de instrucciones y el modelo de programación de la arquitectura. El ensamblador ofrece etiquetas simbólicas, un evaluador de expresiones y un sistema de macros con soporte para macros anidadas y parametrizadas.
+        </p>
+        <p>
+          El propósito del ensamblador no es simplemente traducir código, sino hacer que la máquina sea accesible como un sistema programable. Su diseño refleja la misma filosofía educativa que el hardware: cada etapa de la traducción debe ser comprensible y coherente con la arquitectura subyacente.
+        </p>
+        <p>
+          El ensamblador también incorpora funciones de relocación y documentación clara para que el software y el hardware puedan desarrollarse de forma conjunta como un sistema coherente en lugar de como dominios separados.
+        </p>
+      </section>
+
+      <section class="section" id="emulator">
+        <h2>Emulador</h2>
+        <p>
+          El emulador de software ofrece una forma de ejecutar programas de MASIC en un entorno controlado sin necesidad de disponer del hardware físico. Se desarrolló como una herramienta complementaria del ensamblador y la arquitectura de hardware, permitiendo el desarrollo de software y la validación arquitectónica de forma paralela.
+        </p>
+        <p>
+          El emulador hace posible probar el comportamiento de las instrucciones, depurar conceptos de software y razonar sobre la semántica en tiempo de ejecución de la máquina. Su papel es central para el valor educativo del proyecto porque conecta el diseño del hardware con la ejecución del software.
+        </p>
+        <p>
+          Este enfoque de cadena de herramientas demuestra un co-diseño hardware/software completo: la arquitectura, el ensamblador, el emulador y la implementación de hardware forman una única historia de ingeniería coherente.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>Notas de ingeniería</h2>
+        <p>
+          El proyecto se diseñó intencionalmente para hacer visibles las decisiones arquitectónicas en lugar de ocultarlas tras capas de abstracción. Esta decisión afecta a todos los subsistemas, desde la CPU hasta el ensamblador y el emulador, y refleja un fuerte compromiso con la comprensión de la máquina como un sistema integrado.
+        </p>
+        <p>
+          En futuras iteraciones pueden añadirse diagramas, fotografías, capturas de pantalla y vídeos para apoyar un estudio más profundo de cada parte de la arquitectura.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Diego Cerezo Rojas. Todos los derechos reservados.</p>
+    </footer>
+  </body>
+</html>

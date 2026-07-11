@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio projects page with placeholder project summaries." />
+    <title>Portfolio | Projects</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html">Diego Cerezo Rojas</a>
+      <div class="header-actions">
+        <nav aria-label="Primary navigation">
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="projects.html" aria-current="page">Projects</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="cv.html">CV</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <nav class="lang-switcher" aria-label="Language switcher">
+          <a href="projects.html" aria-current="page">EN</a>
+          <a href="../es/proyectos.html">ES</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-content">
+      <section class="section intro">
+        <h1>Projects</h1>
+        <p>MASIC is my flagship engineering project: a complete computer architecture designed from scratch, with an original ISA, microprogrammed control and working 74HC-based hardware.</p>
+      </section>
+
+      <section class="section">
+        <div class="project-grid">
+          <article class="card project-card">
+            <div class="project-card-header">
+              <p class="eyebrow">MASIC</p>
+              <h2>CPU</h2>
+            </div>
+            <p>Original 8-bit accumulator-based CPU with a custom ISA and microprogrammed control, built as part of a working hardware system.</p>
+            <ul class="project-tags" aria-label="Project focus areas">
+              <li>Custom ISA</li>
+              <li>Microprogramming</li>
+              <li>Hardware build</li>
+            </ul>
+            <a class="button secondary project-link" href="projects/masic.html#cpu">View details</a>
+          </article>
+
+          <article class="card project-card">
+            <div class="project-card-header">
+              <p class="eyebrow">MASIC</p>
+              <h2>Video Display Adapter</h2>
+            </div>
+            <p>Independent display subsystem built with 74HC logic, timing circuitry, synchronization logic, and a dedicated hardware interface.</p>
+            <ul class="project-tags" aria-label="Project focus areas">
+              <li>Video hardware</li>
+              <li>Timing design</li>
+              <li>Hardware interface</li>
+            </ul>
+            <a class="button secondary project-link" href="projects/masic.html#video-display-adapter">View details</a>
+          </article>
+
+          <article class="card project-card">
+            <div class="project-card-header">
+              <p class="eyebrow">MASIC</p>
+              <h2>Assembler</h2>
+            </div>
+            <p>Custom assembler with labels, expressions, and nested macros to make the machine programmable and approachable.</p>
+            <ul class="project-tags" aria-label="Project focus areas">
+              <li>Compiler design</li>
+              <li>Tooling</li>
+              <li>Language design</li>
+            </ul>
+            <a class="button secondary project-link" href="projects/masic.html#assembler">View details</a>
+          </article>
+
+          <article class="card project-card">
+            <div class="project-card-header">
+              <p class="eyebrow">MASIC</p>
+              <h2>Emulator</h2>
+            </div>
+            <p>Software emulator for testing instruction behavior, debugging programs, and validating the architecture without hardware.</p>
+            <ul class="project-tags" aria-label="Project focus areas">
+              <li>Instruction simulation</li>
+              <li>Debugging</li>
+              <li>Architecture validation</li>
+            </ul>
+            <a class="button secondary project-link" href="projects/masic.html#emulator">View details</a>
+          </article>
+
+          <article class="card project-card">
+            <div class="project-card-header">
+              <h2>ASMtris</h2>
+            </div>
+            <p>x86 assembly implementation of the videogame Tetris.</p>
+            <ul class="project-tags" aria-label="Project focus areas">
+              <li>x86 assembly</li>
+              <li>Low-level programming</li>
+              <li>Real-mode DOS</li>
+            </ul>
+            <a class="button secondary project-link" href="https://github.com/tetrix450/asmtris" rel="noreferrer">View on GitHub</a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Diego Cerezo Rojas. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

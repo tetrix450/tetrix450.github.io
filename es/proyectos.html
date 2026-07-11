@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Página de proyectos del portfolio." />
+    <title>Portfolio | Proyectos</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html">Diego Cerezo Rojas</a>
+      <div class="header-actions">
+        <nav aria-label="Navegación principal">
+          <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="acerca-de-mi.html">Sobre mí</a></li>
+            <li><a href="proyectos.html" aria-current="page">Proyectos</a></li>
+            <li><a href="experiencia.html">Experiencia</a></li>
+            <li><a href="educacion.html">Educación</a></li>
+            <li><a href="cv.html">CV</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+        <nav class="lang-switcher" aria-label="Selector de idioma">
+          <a href="../en/projects.html">EN</a>
+          <a href="proyectos.html" aria-current="page">ES</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-content">
+      <section class="section intro">
+        <h1>Proyectos</h1>
+        <p>De todos mis proyectos, MASIC es mi mayor logro: el diseño y construcción de una arquitectura completa diseñada desde cero, con una ISA original, control microprogramado y hardware funcional implementado a un bajo nivel de integración.</p>
+      </section>
+
+      <section class="section">
+        <div class="project-grid">
+          <article class="card project-card">
+            <div class="project-card-header">
+              <p class="eyebrow">MASIC</p>
+              <h2>CPU</h2>
+            </div>
+            <img class="image"
+              src="../assets/masic_board.png"
+              alt="Placa principal de MASIC">
+
+            <p>CPU original de 8 bits basada en acumulador, con ISA propia y control microprogramado: la parte más importante del proyecto MASIC, la construcción de un computador desde 0.</p>
+            <ul class="project-tags" aria-label="Áreas del proyecto">
+              <li>ISA propia</li>
+              <li>Microprogramación</li>
+              <li>Hardware construido</li>
+            </ul>
+            <a class="button secondary project-link" href="proyectos/masic.html#cpu">Ver detalles</a>
+          </article>
+
+          <article class="card project-card">
+            <div class="project-card-header">
+              <p class="eyebrow">MASIC</p>
+              <h2>Emulador</h2>
+            </div>
+
+            <img class="image"
+              src="../assets/cubo.gif"
+              alt="Emulador funcionando">
+
+            <p>Emulador del sistema MASIC: depura el comportamiento de la CPU y la ejecución de programas. Esto permitió validar la arquitectura sin hardware físico, y es una parte importante del desarrollo de software en este computador.</p>
+            <ul class="project-tags" aria-label="Áreas del proyecto">
+              <li>Simulación de arquitectura</li>
+              <li>Depuración</li>
+              <li>Validación de arquitectura</li>
+            </ul>
+            <a class="button secondary project-link" href="proyectos/masic.html#emulator">Ver detalles</a>
+          </article>
+
+          <article class="card project-card">
+            <div class="project-card-header">
+              <p class="eyebrow">MASIC</p>
+              <h2>Adaptador de vídeo</h2>
+            </div>
+
+            <img class="image"
+              src="../assets/video_board.png"
+              alt="Adaptador de vídeo de MASIC">
+
+            <p>Subsistema de visualización independiente hecho con lógica 74HC, circuitería de temporización, sincronización e interfaz dedicada.</p>
+            <ul class="project-tags" aria-label="Áreas del proyecto">
+              <li>Vídeo digital</li>
+              <li>Diseño temporal</li>
+              <li>Interfaz hardware</li>
+            </ul>
+            <a class="button secondary project-link" href="proyectos/masic.html#video-display-adapter">Ver detalles</a>
+          </article>
+
+          <article class="card project-card">
+            <div class="project-card-header">
+              <p class="eyebrow">MASIC</p>
+              <h2>Ensamblador</h2>
+            </div>
+
+            <img class="image"
+              src="../assets/emasic.png"
+              alt="Ensamblador EMASIC">
+
+            <p>Ensamblador personalizado con etiquetas, expresiones y macros anidadas para hacer la máquina más fácilmente programable.</p>
+            <ul class="project-tags" aria-label="Áreas del proyecto">
+              <li>Diseño de compiladores</li>
+              <li>Tooling</li>
+              <li>Diseño de lenguajes</li>
+            </ul>
+            <a class="button secondary project-link" href="proyectos/masic.html#assembler">Ver detalles</a>
+          </article>
+
+          <article class="card project-card">
+            <div class="project-card-header">
+              <h2>ASMtris</h2>
+            </div>
+            <p>Implementación en ensamblador x86 del videojuego Tetris.</p>
+            <ul class="project-tags" aria-label="Áreas del proyecto">
+              <li>Ensamblador x86</li>
+              <li>Programación de bajo nivel</li>
+              <li>Real mode DOS</li>
+            </ul>
+            <a class="button secondary project-link" href="https://github.com/tetrix450/asmtris" rel="noreferrer">Ver en GitHub</a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Diego Cerezo Rojas. Todos los derechos reservados.</p>
+    </footer>
+  </body>
+</html>
