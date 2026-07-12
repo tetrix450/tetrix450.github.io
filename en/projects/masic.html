@@ -1,28 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Detailed technical overview of MASIC, a complete computer architecture designed from first principles." />
+    <meta name="description" content="Technical overview of the MASIC architecture" />
     <title>Portfolio | MASIC</title>
     <link rel="stylesheet" href="../../styles.css" />
   </head>
+  
   <body>
     <header class="site-header">
       <a class="brand" href="../index.html">Diego Cerezo Rojas</a>
       <div class="header-actions">
-        <nav aria-label="Primary navigation">
+        <nav aria-label="Main navigation">
           <ul class="nav-links">
             <li><a href="../index.html">Home</a></li>
-            <li><a href="../about.html">About Me</a></li>
             <li><a href="../projects.html" aria-current="page">Projects</a></li>
-            <li><a href="../experience.html">Experience</a></li>
-            <li><a href="../education.html">Education</a></li>
-            <li><a href="../cv.html">CV</a></li>
             <li><a href="../contact.html">Contact</a></li>
           </ul>
         </nav>
-        <nav class="lang-switcher" aria-label="Language switcher">
+        <nav class="lang-switcher" aria-label="Language selector">
           <a href="masic.html" aria-current="page">EN</a>
           <a href="../../es/proyectos/masic.html">ES</a>
         </nav>
@@ -31,86 +29,156 @@
 
     <main class="page-content">
       <section class="section intro">
-        <p class="eyebrow">Flagship Project</p>
+        <p class="eyebrow">Bachelor's Thesis</p>
         <h1>MASIC</h1>
+
         <p>
-          MASIC is my flagship engineering project: a complete computer architecture designed from scratch for educational purposes, with an original ISA, a microprogrammed control unit and working 74HC-based hardware. It spans the instruction set architecture, processor microarchitecture, memory organization and software toolchain.
+          MASIC is a complete computer system designed and built entirely from
+          scratch over 4 years of development. The project encompasses the
+          design of an original computer architecture, the implementation of a
+          functional CPU, the development of software tools and the construction
+          of dedicated hardware peripherals.
         </p>
+
         <p>
-          The project emphasizes engineering clarity, architectural consistency, and hardware/software co-design. Rather than relying on programmable logic, the implementation uses discrete 74HC-series logic integrated circuits to expose the hardware structure directly at the system level.
+          The goal of the project was to gain an in-depth understanding of how a
+          modern computer is built by addressing every layer of the system:
+          architecture, digital electronics, systems programming, development
+          tools and hardware/software validation.
         </p>
-        <a class="button secondary" href="../projects.html">Back to Projects</a>
+
+        <a class="button secondary" href="../projects.html">
+          Back to Projects
+        </a>
       </section>
 
       <section class="section" id="overview">
-        <h2>Overview</h2>
+        <h2>Project Overview</h2>
+
         <p>
-          MASIC was conceived as a complete computer system that can be understood from the ground up. Its architecture includes an original 8-bit accumulator-based CPU, a custom 16-bit address space, a hardwired control unit, a 64 KiB main memory, an independent 64 KiB I/O space, nested interrupts, multiple addressing modes, a complete stack architecture, and a software environment designed specifically for the machine.
+          MASIC integrates an original 8-bit CPU with 16-bit addressing, a
+          microprogrammed control unit, a custom video adapter, an assembler, an
+          emulator and a software environment designed specifically for the
+          platform.
         </p>
+
         <p>
-          The design philosophy is not to build a practical production machine, but to make every architectural decision explicit and teachable. This makes MASIC both a technical achievement and an educational instrument for understanding how computers are structured at the hardware and software boundary.
+          The project required combining knowledge of computer architecture,
+          digital electronics, low-level programming, compiler design, tool
+          development and complex systems verification.
+        </p>
+
+        <p>
+          MASIC constitutes a complete technology ecosystem designed, implemented and validated end to end.
         </p>
       </section>
 
       <section class="section" id="cpu">
-        <h2>CPU</h2>
+        <h2>CPU and Architecture</h2>
+
         <p>
-          The central processing unit is the heart of MASIC. It is an original accumulator-based architecture designed around simplicity and consistency. The CPU includes a microprogrammed control unit, a 16-bit program counter, a 16-bit stack pointer, a rich set of addressing modes, and a custom instruction set tailored to the machine's educational goals.
+          An original CPU capable of running real software on physical hardware
+          was designed and implemented. The architecture incorporates a custom
+          ISA, a microprogrammed control unit, multiple addressing modes, a
+          vectored interrupt system, subroutine support and a hardware stack.
         </p>
+
         <p>
-          The instruction encoding was designed to remain regular and understandable, while still supporting the essential operations required for a functioning computer system. The memory model includes little-endian organization, a complete stack model, and an interrupt system with a peripheral-supplied interrupt vector.
+          The use of a microprogrammed control unit allowed the architecture to
+          evolve iteratively, facilitating debugging, analysis of the processor's
+          internal behaviour and experimentation with new functionalities.
         </p>
+
         <p>
-          The architecture also includes support for subroutines and interrupts through a stack-based runtime model, making the CPU capable of handling structured control flow rather than only simple instruction sequencing. The hardware has been built and works as a real system.
+          This development required knowledge of processor design, sequential and
+          combinational logic, architectural modelling, digital system debugging
+          and validation on real hardware.
         </p>
       </section>
 
       <section class="section" id="video-display-adapter">
-        <h2>Video Display Adapter</h2>
+        <h2>Video Adapter</h2>
+
         <p>
-          The video display adapter is an independent hardware subsystem created specifically for MASIC. Instead of integrating the display hardware directly into the CPU board, the project separates computation from display generation, which results in a cleaner and more realistic modular system structure.
+          A dedicated video peripheral capable of autonomously generating a VGA
+          signal was developed, completely offloading video generation tasks from
+          the CPU.
         </p>
+
         <p>
-          The subsystem was implemented using 74HC-series logic integrated circuits and required the design of digital video generation logic, timing circuitry, memory interface logic, synchronization mechanisms, and system integration. The board acts as a dedicated peripheral that communicates with the CPU through a custom hardware interface.
+          The design required implementing precise timing circuits, synchronization
+          signal generation and a custom hardware interface integrated with the
+          system's memory and I/O architecture, applying real-time systems design
+          principles.
         </p>
+
         <p>
-          This separation makes the project more representative of real computer systems, where independent devices interact through well-defined interfaces rather than sharing the same physical logic fabric.
+          The result was a robust and functional subsystem that demonstrates the
+          ability to design and validate complete digital systems that interact
+          with external hardware in real time.
         </p>
       </section>
 
       <section class="section" id="assembler">
         <h2>Assembler</h2>
+
         <p>
-          MASIC includes a custom assembler designed to support the architecture's instruction set and programming model. The assembler provides symbolic labels, an expression evaluator, and a macro system with support for nested and parameterized macros.
+          MASIC includes a custom assembler developed specifically for the
+          architecture. The tool provides symbolic labels, expression evaluation
+          and a system of parameterized and nested macros to facilitate low-level
+          software development.
         </p>
+
         <p>
-          The purpose of the assembler is not simply to translate code but to make the machine accessible as a programmable system. Its design reflects the same educational philosophy as the hardware: every stage of translation should be understandable and consistent with the underlying architecture.
+          The project involved designing and implementing a complete software
+          tool, from language specification to machine code generation, applying
+          principles of compiler design, text processing and command-line tool
+          development.
         </p>
+
         <p>
-          The assembler also supports relocation features and clear documentation so that software and hardware can be developed together as a coherent system rather than as separate domains.
+          The assembler demonstrates the ability to transform a theoretical
+          architectural specification into a usable and maintainable development
+          environment.
         </p>
       </section>
 
       <section class="section" id="emulator">
         <h2>Emulator</h2>
+
         <p>
-          The software emulator provides a way to execute MASIC programs in a controlled environment without requiring the physical hardware to be present. It was developed as a companion tool to the assembler and the hardware architecture, allowing software development and architectural validation to proceed in parallel.
+          An emulator capable of reproducing the behaviour of the complete system
+          in software was developed, enabling programs to be executed and the
+          architecture to be validated without relying on physical hardware.
         </p>
+
         <p>
-          The emulator makes it possible to test instruction behavior, debug software concepts, and reason about the runtime semantics of the machine. Its role is central to the project's educational value because it bridges the gap between hardware design and software execution.
+          The emulator models the CPU, memory map and system peripherals,
+          providing an experimentation and debugging environment that enabled the
+          parallel development of hardware and software.
         </p>
+
         <p>
-          This toolchain approach demonstrates complete hardware/software co-design: the architecture, assembler, emulator, and hardware implementation are all part of a single coherent engineering story.
+          Building this tool required system modelling, low-level programming,
+          validation mechanism design and a deep understanding of hardware/software
+          interaction.
         </p>
       </section>
 
       <section class="section">
-        <h2>Engineering Notes</h2>
+        <h2>Demonstrated abilities</h2>
+
         <p>
-          The project was intentionally designed to make architectural decisions visible rather than hidden behind abstraction layers. This decision affects every subsystem, from the CPU to the assembler and emulator, and reflects a strong commitment to understanding the machine as an integrated system.
+          MASIC is an end-to-end engineering project that demonstrates the
+          ability to tackle complex problems, learn technologies independently
+          and design complete solutions that integrate hardware and software.
         </p>
+
         <p>
-          Diagrams, photographs, screenshots, and videos can be added here in future iterations to support deeper study of each part of the architecture.
+          The main areas covered include computer architecture, digital
+          electronics, processor design, systems programming, tool development,
+          system modelling and verification, complex problem solving, real-time
+          systems and long-term technical project management.
         </p>
       </section>
     </main>
