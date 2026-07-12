@@ -14,11 +14,7 @@
         <nav aria-label="Navegación principal">
           <ul class="nav-links">
             <li><a href="index.html">Inicio</a></li>
-            <li><a href="acerca-de-mi.html">Sobre mí</a></li>
             <li><a href="proyectos.html" aria-current="page">Proyectos</a></li>
-            <li><a href="experiencia.html">Experiencia</a></li>
-            <li><a href="educacion.html">Educación</a></li>
-            <li><a href="cv.html">CV</a></li>
             <li><a href="contacto.html">Contacto</a></li>
           </ul>
         </nav>
@@ -32,7 +28,7 @@
     <main class="page-content">
       <section class="section intro">
         <h1>Proyectos</h1>
-        <p>De todos mis proyectos, MASIC es mi mayor logro: el diseño y construcción de una arquitectura completa diseñada desde cero, con una ISA original, control microprogramado y hardware funcional implementado a un bajo nivel de integración.</p>
+        <p>De todos mis proyectos, MASIC es mi mayor logro. Ha sido mi TFG, con una calificación de 10/10: tras 4 años de desarrollo, se diseñó y construyó de una arquitectura completa diseñada desde cero, con una ISA original, control microprogramado y hardware funcional implementado a un bajo nivel de integración.</p>
       </section>
 
       <section class="section">
@@ -42,9 +38,7 @@
               <p class="eyebrow">MASIC</p>
               <h2>CPU</h2>
             </div>
-            <img class="image"
-              src="../assets/masic_board.png"
-              alt="Placa principal de MASIC">
+            <img class="image" src="../assets/masic_board.png" alt="Placa principal de MASIC">
 
             <p>CPU original de 8 bits basada en acumulador, con ISA propia y control microprogramado: la parte más importante del proyecto MASIC, la construcción de un computador desde 0.</p>
             <ul class="project-tags" aria-label="Áreas del proyecto">
@@ -61,9 +55,7 @@
               <h2>Emulador</h2>
             </div>
 
-            <img class="image"
-              src="../assets/cubo.gif"
-              alt="Emulador funcionando">
+            <img class="image" src="../assets/cubo.gif" alt="Emulador funcionando">
 
             <p>Emulador del sistema MASIC: depura el comportamiento de la CPU y la ejecución de programas. Esto permitió validar la arquitectura sin hardware físico, y es una parte importante del desarrollo de software en este computador.</p>
             <ul class="project-tags" aria-label="Áreas del proyecto">
@@ -80,14 +72,12 @@
               <h2>Adaptador de vídeo</h2>
             </div>
 
-            <img class="image"
-              src="../assets/video_board.png"
-              alt="Adaptador de vídeo de MASIC">
+            <img class="image" src="../assets/video_board.png" alt="Adaptador de vídeo de MASIC">
 
-            <p>Subsistema de visualización independiente hecho con lógica 74HC, circuitería de temporización, sincronización e interfaz dedicada.</p>
+            <p>Adaptador de vídeo VGA compatible con MASIC: genera las señales de sincronización de vídeo y color necesarias para mostrar vídeo de forma autónoma.</p>
             <ul class="project-tags" aria-label="Áreas del proyecto">
-              <li>Vídeo digital</li>
-              <li>Diseño temporal</li>
+              <li>Generación de señales de vídeo</li>
+              <li>Sistemas en tiempo real</li>
               <li>Interfaz hardware</li>
             </ul>
             <a class="button secondary project-link" href="proyectos/masic.html#video-display-adapter">Ver detalles</a>
@@ -99,9 +89,7 @@
               <h2>Ensamblador</h2>
             </div>
 
-            <img class="image"
-              src="../assets/emasic.png"
-              alt="Ensamblador EMASIC">
+            <img class="image" src="../assets/emasic.png" alt="Ensamblador EMASIC">
 
             <p>Ensamblador personalizado con etiquetas, expresiones y macros anidadas para hacer la máquina más fácilmente programable.</p>
             <ul class="project-tags" aria-label="Áreas del proyecto">
@@ -116,6 +104,9 @@
             <div class="project-card-header">
               <h2>ASMtris</h2>
             </div>
+
+            <img class="image" src="../assets/asmtris.png" alt="ASMTRIS">
+
             <p>Implementación en ensamblador x86 del videojuego Tetris.</p>
             <ul class="project-tags" aria-label="Áreas del proyecto">
               <li>Ensamblador x86</li>

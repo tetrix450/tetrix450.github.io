@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Visión técnica detallada de MASIC, una arquitectura informática completa diseñada desde cero." />
+    <meta name="description" content="Visión técnica general de la arquitectura MASIC" />
     <title>Portafolio | MASIC</title>
     <link rel="stylesheet" href="../../styles.css" />
   </head>
@@ -16,11 +16,7 @@
         <nav aria-label="Navegación principal">
           <ul class="nav-links">
             <li><a href="../index.html">Inicio</a></li>
-            <li><a href="../acerca-de-mi.html">Sobre mí</a></li>
             <li><a href="../proyectos.html" aria-current="page">Proyectos</a></li>
-            <li><a href="../experiencia.html">Experiencia</a></li>
-            <li><a href="../educacion.html">Educación</a></li>
-            <li><a href="../cv.html">CV</a></li>
             <li><a href="../contacto.html">Contacto</a></li>
           </ul>
         </nav>
@@ -33,86 +29,160 @@
 
     <main class="page-content">
       <section class="section intro">
-        <p class="eyebrow">Proyecto insignia</p>
+        <p class="eyebrow">Trabajo de Fin de Grado</p>
         <h1>MASIC</h1>
+
         <p>
-          MASIC es mi proyecto de ingeniería insignia: una arquitectura informática completa diseñada desde cero con fines educativos, con una ISA original, una unidad de control microprogramada y hardware funcional basado en 74HC. Abarca la arquitectura del conjunto de instrucciones, la microarquitectura del procesador, la organización de la memoria y la cadena de herramientas de software.
+          MASIC es un sistema informático completo diseñado y construido desde cero
+          durante 4 años de desarrollo. El proyecto abarca el diseño de una
+          arquitectura de computador original, la implementación de una CPU funcional,
+          el desarrollo de herramientas software y la construcción de periféricos
+          hardware dedicados.
         </p>
+
         <p>
-          El proyecto enfatiza la claridad de ingeniería, la consistencia arquitectónica y el co-diseño hardware/software. En lugar de basarse en lógica programable, la implementación utiliza circuitos integrados lógicos discretos de la serie 74HC para exponer la estructura del hardware directamente a nivel de sistema.
+          El objetivo del proyecto fue comprender en profundidad cómo se construye
+          un computador moderno, abordando todas las capas del sistema: arquitectura,
+          electrónica digital, programación de sistemas, herramientas de desarrollo y
+          validación hardware/software.
         </p>
-        <a class="button secondary" href="../proyectos.html">Volver a Proyectos</a>
+
+        <a class="button secondary" href="../proyectos.html">
+          Volver a Proyectos
+        </a>
       </section>
 
       <section class="section" id="overview">
-        <h2>Resumen general</h2>
+        <h2>Resumen del proyecto</h2>
+
         <p>
-          MASIC fue concebido como un sistema informático completo que puede entenderse desde cero. Su arquitectura incluye una CPU original basada en acumulador de 8 bits, un espacio de direcciones de 16 bits, una unidad de control cableada, 64 KiB de memoria principal, un espacio de E/S independiente de 64 KiB, interrupciones anidadas, múltiples modos de direccionamiento, una arquitectura de pila completa y un entorno de software diseñado específicamente para la máquina.
+          MASIC integra una CPU original de 8 bits y direcciones de 16 bits, una
+          unidad de control microprogramada, un adaptador de vídeo propio, un
+          ensamblador, un emulador y un entorno software diseñado específicamente
+          para la plataforma.
         </p>
+
         <p>
-          La filosofía de diseño no consiste en construir una máquina práctica de producción, sino en hacer explícitas y enseñables todas las decisiones arquitectónicas. Esto convierte a MASIC en una contribución técnica y en un instrumento educativo para comprender cómo se estructuran las computadoras en el límite entre hardware y software.
+          El proyecto requirió combinar conocimientos de arquitectura de computadores,
+          electrónica digital, programación de bajo nivel, diseño de compiladores,
+          desarrollo de herramientas y verificación de sistemas complejos.
+        </p>
+
+        <p>
+          Más que un único desarrollo, MASIC constituye un ecosistema tecnológico
+          completo diseñado, implementado y validado de extremo a extremo.
         </p>
       </section>
 
       <section class="section" id="cpu">
-        <h2>CPU</h2>
+        <h2>CPU y arquitectura</h2>
+
         <p>
-          La unidad central de procesamiento es el corazón de MASIC. Se trata de una arquitectura original basada en acumulador, diseñada para la simplicidad y la coherencia. La CPU incluye una unidad de control microprogramada, un contador de programa de 16 bits, un puntero de pila de 16 bits, un conjunto amplio de modos de direccionamiento y un conjunto de instrucciones propio adaptado a los objetivos educativos de la máquina.
+          Se diseñó e implementó una CPU original capaz de ejecutar software real
+          sobre hardware físico. La arquitectura incorpora una ISA propia, una unidad
+          de control microprogramada, múltiples modos de direccionamiento, un sistema
+          de interrupciones vectorizadas, soporte para subrutinas y un modelo de
+          ejecución basado en pila.
         </p>
+
         <p>
-          La codificación de instrucciones se diseñó para ser regular y comprensible, al tiempo que permite las operaciones esenciales para un sistema informático funcional. El modelo de memoria incluye organización little-endian, un modelo de pila completo y un sistema de interrupciones con un vector de interrupción suministrado por el periférico.
+          La elección de una unidad de control microprogramada permitió evolucionar
+          la arquitectura de manera iterativa, facilitando la depuración, el análisis
+          del comportamiento interno del procesador y la experimentación con nuevas
+          funcionalidades.
         </p>
+
         <p>
-          La arquitectura también incluye soporte para subrutinas e interrupciones a través de un modelo de ejecución basado en pila, lo que permite manejar flujos de control estructurados en lugar de limitarse a una simple secuenciación de instrucciones. El hardware se ha construido y funciona como un sistema real.
+          Este desarrollo exigió aplicar conocimientos de diseño de procesadores,
+          lógica secuencial y combinacional, modelado de arquitecturas, depuración de
+          sistemas digitales y validación sobre hardware real.
         </p>
       </section>
 
-      <section class="section" id="video-display-adapter">
-        <h2>Adaptador de vídeo</h2>
-        <p>
-          El adaptador de vídeo es un subsistema de hardware independiente creado específicamente para MASIC. En lugar de integrar el hardware de visualización directamente en la placa de la CPU, el proyecto separa el procesamiento de la generación de vídeo, lo que da lugar a una estructura modular más limpia y más realista.
-        </p>
-        <p>
-          El subsistema se implementó con circuitos integrados lógicos de la serie 74HC y requirió el diseño de lógica digital de generación de vídeo, circuitos de temporización, lógica de interfaz de memoria, mecanismos de sincronización e integración de sistemas. La placa funciona como un periférico dedicado que se comunica con la CPU a través de una interfaz de hardware personalizada.
-        </p>
-        <p>
-          Esta separación hace que el proyecto sea más representativo de los sistemas informáticos reales, donde los dispositivos independientes interactúan a través de interfaces bien definidas en lugar de compartir la misma lógica física.
-        </p>
-      </section>
+    <section class="section" id="video-display-adapter">
+      <h2>Adaptador de vídeo</h2>
+
+      <p>
+        Se desarrolló un periférico de vídeo dedicado capaz de generar señal VGA de
+        manera autónoma, descargando completamente a la CPU de las tareas de
+        generación de vídeo.
+      </p>
+
+      <p>
+        El diseño requirió implementar circuitos de temporización precisos,
+        generación de señales de sincronismo y una interfaz hardware personalizada
+        integrada con la arquitectura de memoria y E/S del sistema, aplicando
+        principios de diseño de sistemas en tiempo real.
+      </p>
+
+      <p>
+        El resultado fue un subsistema robusto y funcional que demuestra capacidad
+        para diseñar y validar sistemas digitales completos que interactúan con
+        hardware externo en tiempo real.
+      </p>
+    </section>
 
       <section class="section" id="assembler">
         <h2>Ensamblador</h2>
+
         <p>
-          MASIC incluye un ensamblador personalizado diseñado para soportar el conjunto de instrucciones y el modelo de programación de la arquitectura. El ensamblador ofrece etiquetas simbólicas, un evaluador de expresiones y un sistema de macros con soporte para macros anidadas y parametrizadas.
+          MASIC incorpora un ensamblador propio desarrollado específicamente para la
+          arquitectura. La herramienta incluye etiquetas simbólicas, evaluación de
+          expresiones y un sistema de macros parametrizadas y anidadas para facilitar
+          el desarrollo de software de bajo nivel.
         </p>
+
         <p>
-          El propósito del ensamblador no es simplemente traducir código, sino hacer que la máquina sea accesible como un sistema programable. Su diseño refleja la misma filosofía educativa que el hardware: cada etapa de la traducción debe ser comprensible y coherente con la arquitectura subyacente.
+          El proyecto implicó diseñar e implementar una herramienta software completa,
+          desde la especificación del lenguaje hasta la generación de código máquina,
+          aplicando principios de diseño de compiladores, procesamiento de texto y
+          desarrollo de herramientas de línea de comandos.
         </p>
+
         <p>
-          El ensamblador también incorpora funciones de relocación y documentación clara para que el software y el hardware puedan desarrollarse de forma conjunta como un sistema coherente en lugar de como dominios separados.
+          El ensamblador demuestra capacidad para transformar una especificación
+          teórica de una arquitectura en un entorno de desarrollo utilizable y
+          mantenible.
         </p>
       </section>
 
       <section class="section" id="emulator">
         <h2>Emulador</h2>
+
         <p>
-          El emulador de software ofrece una forma de ejecutar programas de MASIC en un entorno controlado sin necesidad de disponer del hardware físico. Se desarrolló como una herramienta complementaria del ensamblador y la arquitectura de hardware, permitiendo el desarrollo de software y la validación arquitectónica de forma paralela.
+          Se desarrolló un emulador capaz de reproducir el comportamiento del sistema
+          completo en software, permitiendo ejecutar programas y validar la
+          arquitectura sin depender del hardware físico.
         </p>
+
         <p>
-          El emulador hace posible probar el comportamiento de las instrucciones, depurar conceptos de software y razonar sobre la semántica en tiempo de ejecución de la máquina. Su papel es central para el valor educativo del proyecto porque conecta el diseño del hardware con la ejecución del software.
+          El emulador modela la CPU, el mapa de memoria y los periféricos del sistema,
+          proporcionando un entorno de experimentación y depuración que permitió el
+          desarrollo paralelo de hardware y software.
         </p>
+
         <p>
-          Este enfoque de cadena de herramientas demuestra un co-diseño hardware/software completo: la arquitectura, el ensamblador, el emulador y la implementación de hardware forman una única historia de ingeniería coherente.
+          La construcción de esta herramienta requirió modelado de sistemas,
+          programación de bajo nivel, diseño de mecanismos de validación y una
+          comprensión profunda de la interacción entre hardware y software.
         </p>
       </section>
 
       <section class="section">
-        <h2>Notas de ingeniería</h2>
+        <h2>Competencias demostradas</h2>
+
         <p>
-          El proyecto se diseñó intencionalmente para hacer visibles las decisiones arquitectónicas en lugar de ocultarlas tras capas de abstracción. Esta decisión afecta a todos los subsistemas, desde la CPU hasta el ensamblador y el emulador, y refleja un fuerte compromiso con la comprensión de la máquina como un sistema integrado.
+          MASIC es un proyecto de ingeniería desarrollado de extremo a extremo que
+          demuestra capacidad para abordar problemas complejos, aprender tecnologías
+          de forma autónoma y diseñar soluciones completas que integran hardware y
+          software.
         </p>
+
         <p>
-          En futuras iteraciones pueden añadirse diagramas, fotografías, capturas de pantalla y vídeos para apoyar un estudio más profundo de cada parte de la arquitectura.
+          Entre las principales áreas trabajadas destacan la arquitectura de
+          computadores, electrónica digital, diseño de procesadores, programación de
+          sistemas, desarrollo de herramientas, modelado y verificación de sistemas,
+          resolución de problemas complejos, sistemas en tiempo real y gestión de proyectos técnicos de larga duración.
         </p>
       </section>
     </main>
