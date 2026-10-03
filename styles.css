@@ -236,6 +236,12 @@ main {
   align-self: flex-start;
 }
 
+.project-links {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: auto;
+}
+
 .page-content {
   padding-top: 1rem;
 }
